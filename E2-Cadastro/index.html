@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro Veríssimo</title>
+  </head>
+  <style>
+    h1 {text-align: center;}
+    div {text-align: center;}
+    p {text-align: center;}
+
+  </style>
+
+  <body>
+
+    <h1>Cadastre-se</h1>
+    <div>
+        <form action="." method="post"> 
+        <label for="userid">ID de usuario</label><br>
+        <input  type="text" id="userid" name="userid"><br><br>
+
+        <label for="pass">Senha</label><br>
+        <input  type="password" id="pass" name="pass"><br><br>
+
+        <label for="email">Email</label><br>
+        <input  type="email" id="email" name="email"><br><br>
+
+        <label for="date">Data de Nascimento</label><br>
+        <input  type="date" id="date" name="date"><br><br>
+
+        Sexo<br>
+        <input type="radio" name="sexo" value="m" checked>M
+        <input type="radio" name="sexo" value="f">F
+        <br><br>
+
+        <label for="state">Estado</label><br>
+        <form action="." method="get">
+            <select id="state">
+                <option value="Solteiro">Solteiro</option>
+                <option value="Casado">Casado</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Liquido">Liquido</option>
+                <option value="Em Choque">Em Choque(a)</option>
+                <option value="Vegetativo">Vegetativo</option>
+            </select>
+        <br><br>
+        </form> <br>
+
+        <input type="submit" value="Continuar">
+        </form>
+        
+        <br><br><br><br>
+
+        <p> <a href="../">Voltar</a></p> 
+    </div>
+  </body>
+
+</html>
