@@ -1,6 +1,75 @@
+
+@font-face {
+  font-family: 'Inconsolata'; 
+  src: url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@280&display=swap'); 
+}
+
 body{
-  color:white;
-  background-image: url("media/rain.gif");
+  background-image: url(../media/gbg.png);
   background-size: cover;
   background-position: center;
+  font-family: "Inconsolata", monospace;
+  color:white;
+  font-size: 20px;
+}
+
+.leftstack div {
+  float: left;
+  clear: none; 
+}
+
+
+.centered-box-div {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+
+  border: 3px solid rgba(255, 255, 255, .9);
+  border-radius: 25px;
+}
+
+img{
+  border: 4px solid rgba(255, 255, 255, .9);
+  border-radius: 12px;
+}
+
+.flex-container {
+  margin-top: 52px;
+  display: flex;
+  justify-content: center;  
+  flex-direction: row;
+}
+
+.flex-left
+{
+  margin-right: 15px;
+  margin-bottom: -5px;
+}
+
+.flex-right {
+  width: 40%;
+  padding: 15px;
+  border: 4px solid rgba(255, 255, 255, .9);
+  border-radius: 12px;
+}
+
+.centertext
+{
+  text-align: center;
+}
+
+   a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+    }
+
+    a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: underline;
 }
