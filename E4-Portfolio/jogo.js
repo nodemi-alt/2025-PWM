@@ -52,7 +52,7 @@ function lerEntrada()
 
     let keke = 16-tentativas;
     atualizarHistorico(entrada, resultado.hits, resultado.vaca);
-    document.getElementById("estado").innerHTML="<br/>Você tem " + keke + "tentativas sobrando";
+    document.getElementById("estado").innerHTML="<br/>Você tem " + keke + " tentativas sobrando";
 
     if (resultado.hits === 5)
     {
