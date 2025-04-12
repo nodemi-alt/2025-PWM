@@ -4,179 +4,171 @@
     src: url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@280&display=swap'); 
 }
 
-h1
-{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 30px;
-    margin-top:3px;
-    margin-bottom: 10px;
-}
-  
 body
 {
-    background-image: url(../media/rbg.png);
+    background-image: url(../../media/dbbg.png);
     font-family: "Inconsolata", monospace;
     color:white;
     font-size: 20px;
 }
 
-.flex-container 
+a:link, a:visited
 {
+    font-family: "Inconsolata", monospace;
+    color:rgb(187, 251, 253);
+    font-size: 25px;
+    text-decoration:none;
+}
+
+a.az:link, a.az:visited
+{
+    font-family: "Inconsolata", monospace;
+    color:rgb(251, 218, 255);
+    font-size: 25px;
+    text-decoration:none;
+}
+
+a:hover
+{
+    font-family: "Inconsolata", monospace;
+    color:rgb(164, 13, 202);
+    font-size: 25px;
+}
+
+.muchotexto
+{
+    margin : 0 auto;
+}
+
+.tab
+{
+    cursor: pointer;
+    font-family: "Inconsolata", monospace;
+    color:white;
+    border: 4px solid rgba(255, 255, 255, .9);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom: none;
+    background-color: rgba(26, 10, 44, 0.75);
+    font-size: 26px;
+    width: 100%;
+    
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 15px;
+}
+
+.tab:hover 
+{
+    background-color: rgba(35, 20, 88, 0.75);
+}
+
+.conteudo
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    
+    background-color: rgba(26, 10, 44, 0.75);
+    font-family: "Inconsolata", monospace;
+    color:white;
+    font-size: 26px;
+    width: 100%;
+    border: 4px solid rgba(255, 255, 255, .9);
+    border-top: none;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding-right: 5px;
+    padding-left: 25px;
+}
+
+.flex-row
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-col
+{
+    align-self: flex-start;  
+    width : 22%;
+    margin-left: 33px;
+    margin-right: 33px;
+    display: flex;
+    justify-content: center;  
+    flex-direction: column;
+}
+
+.flex-col-tab
+{
+    width : 100%;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;  
+    flex-direction: column;
+}
+
+.centered-box
+{
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+.flex-intro
+{
     display: flex;
     justify-content: center;  
     flex-direction: row;
 }
 
-.flex-comojogar 
+.extra-left 
 {
-    width: 29%;
+    width: 14%;
     padding: 15px;
     border: 4px solid rgba(255, 255, 255, .9);
     border-radius: 12px;
-    margin-right: 15px;
-    min-height: 286px;
+    margin-top:0px;
+    margin-bottom:10px;
+    margin-left: 255px;
+    min-height: 140px;
 }
 
-.flex-historico
+.extra-right
 {
-    justify-content: center;  
-    align-content: center;
-    width: 38%;
+    width: 14%;
     padding: 15px;
     border: 4px solid rgba(255, 255, 255, .9);
     border-radius: 12px;
+    margin-top:0px;
+    margin-bottom:10px;
+    margin-right: 220px;
+    min-height: 140px;
+    text-align:right;
 }
 
-.flex-tentativas
-{
-    width: 29%;
-    padding: 15px;
-    border: 4px solid rgba(255, 255, 255, .9);
-    border-radius: 12px;
-    margin-left: 15px;
+.muchotexto
+{ 
+  margin-top:70px;
+  text-align: center;
+  width: 33%;
 }
 
-.scroll
+.icone 
 {
-    overflow-y: auto;
-    max-height: 230px;
+    width: 26px;
+    height: 26px;
 }
 
-.vaca-icone 
+.vaca 
 {
-    width: 30px;
-    height: 30px;
-}
-
-#estado
-{
-    text-align: center;
-}
-
-#historico 
-{
-    width: 84%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#historico th,#historico td 
-{
-    border: 2px solid rgba(255, 255, 255, .9);
-    height:36px;
-    font-size: 20px;
-    text-align: center;
-}
-
-#campoTentativa
-{
-    font-family: "Inconsolata", monospace;
-    color:white;
-    font-size: 20px;
-    background-color: rgba(0,0,0, 0.5);
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, .9);
-    width: 100px;
-    height: 50px;
-
-    margin-top: 40px;
-    margin-left: 75px;
-    margin-right: 40px;
-}
-
-#botaoTentativa
-{
-    font-family: "Inconsolata", monospace;
-    color:white;
-    font-size: 20px;
-    background-color: rgba(150, 16, 16, 0.5);
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, .9);
-    width: 100px;
-    height: 50px;
-
-    margin-top: 40px;
-}
-
-#botaoTentativa:hover
-{
-    background-color: rgba(233, 158, 158, 0.75);
-    color:rgb(32, 28, 28);
-}
-
-#botaoReiniciar
-{
-    font-family: "Inconsolata", monospace;
-    color:white;
-    font-size: 17px;
-    background-color: rgba(150, 16, 16, 0.5);
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, .9);
-    width: 100px;
-    height: 50px;
-
-    margin-top: 40px;
-    margin-left: 35px;
-}
-
-#botaoReiniciar:hover
-{
-    background-color: rgba(233, 158, 158, 0.75);
-    color:rgb(32, 28, 28);
-}
-
-#botaoTrapaca
-{
-    font-family: "Inconsolata", monospace;
-    color:white;
-    font-size: 2px;
-    background-color: rgba(150, 16, 16, 0.5);
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, .9);
-    width: 30px;
-    height: 15;
-    margin-left: 5px;
-}
-
-#botaoTrapaca:hover
-{
-    background-color: rgba(233, 158, 158, 0.75);
-    color:rgb(32, 28, 28);
-}
-
-.vacaTransparente
-{
-    width:auto;
-    height: 111px;
-}
-
-.textoQueimando
-{
-    width:auto;
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 34px;
+    height: 34px;
 }

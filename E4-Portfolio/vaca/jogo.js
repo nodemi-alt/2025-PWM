@@ -15,8 +15,8 @@ function atualizarHistorico(entrada, ehits, evaca)
                 <td>${historico.length - index}</td> 
                 <td>${entry.tentativa}</td>
                 <td>
-                    ${'<img src="../E4-Portfolio/vaca.png" class="vaca-icone">'.repeat(entry.vaca)}
-                    ${'<img src="../E4-Portfolio/vacatransparente.gif" class="vaca-icone">'.repeat(entry.hits)}
+                    ${'<img src="../vaca/vaca.png" class="vaca-icone">'.repeat(entry.vaca)}
+                    ${'<img src="../vaca/vacatransparente.gif" class="vaca-icone">'.repeat(entry.hits)}
                 </td>
             </tr>
         `).join('');
@@ -60,13 +60,15 @@ function lerEntrada()
     if (resultado.hits === 5)
     {
         document.getElementById("botaoTentativa").disabled=true;
+        document.getElementById("campoTentativa").disabled=true;
         document.getElementById("estado").innerHTML="<br/><br/>Voce ganhou!!!<br/><br/><br/>⸜(￣▽￣)👍 - orgulhoso de vc";
         return;
     }
     if (tentativas === 16)
     {
         document.getElementById("botaoTentativa").disabled=true;
-        document.getElementById("estado").innerHTML="<br/><br/>Voce perdeu!!!<br/>A senha era: " + senha.join('') + "<br/><br/> 	(￣ヘ￣) - vc me desaponta";
+        document.getElementById("campoTentativa").disabled=true;
+        document.getElementById("estado").innerHTML="<br/><br/>Voce perdeu!!!<br/>A senha era: " + senha.join('') + "<br/><br/>(￣ヘ￣) - vc me desaponta";
         return;
     }
 }
@@ -76,6 +78,7 @@ function reiniciarJogo()
     document.getElementById("estado").innerHTML="<br/>Jogo reiniciado!<br/>Senha anterior: " + senha.join('') +"<br/><br/>Você tem 16 tentativas sobrando<br/><br/><br/>(^ᴗ^✿)";
 
     document.getElementById("botaoTentativa").disabled=false;
+    document.getElementById("campoTentativa").disabled=false;
     senha = novaSenha();
     let newhistorico = [];
     historico = newhistorico;
