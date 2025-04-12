@@ -82,6 +82,8 @@ function reiniciarJogo()
     tentativas = 0;
 } 
 
+function trapaca() { alert("Senha : " + senha.join('')); return; }
+
 let senha = novaSenha();
 let tentativas = 0;
 let historico = [];
@@ -90,3 +92,4 @@ document.getElementById("estado").innerHTML="<br/><br/>Você tem 16 tentativas s
 
 botaoTentativa.addEventListener("click", lerEntrada);
 botaoReiniciar.addEventListener("click", reiniciarJogo);
+botaoTrapaca.addEventListener("click", trapaca);
