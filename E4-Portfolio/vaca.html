@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Senhissima</title>
+        <link rel="stylesheet" href="../E4-Portfolio/style.css">
+    </head>
+
+    <body>
+        
+        <h1> 
+            <img class="vacaTransparente" src="../E4-Portfolio/vacatransparente.gif"> 
+            <img class="textoQueimando" src="../E4-Portfolio/textoqueimandoarialalt.gif"> 
+            <img class="vacaTransparente" src="../E4-Portfolio/vacatransparente.gif"> 
+        </h1>
+
+        
+        <div class="flex-container"> 
+    
+            <div class="flex-comojogar">
+                <br>
+                Uma senha aleatória de cinco dígitos distintos.<br><br>
+                16 tentativas para a adivinhar.<br><br>
+                Digitos corretos no local errado serão representados por uma vaca ordinária.<br><br>
+                Digitos corretos no local certo serão representados por uma vaca dançante.
+            </div>
+
+            <div class="flex-historico">
+                <h1>Historico</h1>
+                <div class="scroll">
+                    <table id="historico"> 
+                        <thead></thead> <tbody></tbody> <caption> </caption> 
+                    </table>
+                </div>
+            </div>
+
+            <div class="flex-tentativas">
+                <div id="estado"></div>
+                <input type="text" id="campoTentativa" maxlength="5" placeholder=":)))">
+                <button id = botaoTentativa>Enviar</button>
+                <button id = botaoReiniciar>Reiniciar</button>
+            </div>
+
+        </div>
+
+    <script src="jogo.js"></script>
+
+    </body>
+</html>

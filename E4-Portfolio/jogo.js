@@ -2,7 +2,7 @@ function novaSenha()
 {
     let senha = new Set();
     while (senha.size<5) { senha.add(Math.floor(Math.random() * 10)); }
-    console.log('Teste senha:', senha);
+    console.log('Senha gerada:', senha);
     return Array.from(senha);
 }
 
@@ -15,8 +15,8 @@ function atualizarHistorico(entrada, ehits, evaca)
                 <td>${historico.length - index}</td> 
                 <td>${entry.tentativa}</td>
                 <td>
-                    ${'<img src="../E4-Portfolio/teste.jpg" class="cow-icon">'.repeat(entry.vaca)}
-                    ${'<img src="../E4-Portfolio/vacad.gif" class="cow-icon">'.repeat(entry.hits)}
+                    ${'<img src="../E4-Portfolio/vaca.png" class="vaca-icone">'.repeat(entry.vaca)}
+                    ${'<img src="../E4-Portfolio/vacatransparente.gif" class="vaca-icone">'.repeat(entry.hits)}
                 </td>
             </tr>
         `).join('');
@@ -42,53 +42,50 @@ function lerEntrada()
 
 
     document.getElementById("campoTentativa").value = "";
-    console.log('Teste tentativa:', entrada); //
     
     entrada=entrada.split('').map(Number);
 
     let resultado = calcularAcertos(entrada);
-    console.log('Teste resultado:', resultado); //
-    console.log('Teste vaca:', resultado.vaca); //
 
     let keke = 16-tentativas;
-    atualizarHistorico(entrada, resultado.hits, resultado.vaca);
-    document.getElementById("estado").innerHTML="<br/>Você tem " + keke + " tentativas sobrando";
+    atualizarHistorico(entrada.join(''), resultado.hits, resultado.vaca);
+    
+    if ( tentativas < 3) { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>(ᵔ◡ᵔ✿)"; }
+    else if ( tentativas < 6) { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>(ᵔ◡ᵔ*)"; }
+    else if ( tentativas < 9) { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>(＾＾＃)"; }
+    else if ( tentativas < 12) { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>(・_・;)"; }
+    else if ( tentativas < 15) { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>(°△°|||)"; }
+    else { document.getElementById("estado").innerHTML="<br/><br/>Você tem " + keke + " tentativas sobrando<br/><br/><br/>＼(° □ ° l|l)/"; }
 
     if (resultado.hits === 5)
     {
         document.getElementById("botaoTentativa").disabled=true;
-        document.getElementById("estado").innerHTML="acertou!!";
+        document.getElementById("estado").innerHTML="<br/><br/>Voce ganhou!!!<br/><br/><br/>⸜(￣▽￣)👍 - orgulhoso de vc";
         return;
     }
     if (tentativas === 16)
     {
         document.getElementById("botaoTentativa").disabled=true;
-        document.getElementById("estado").innerHTML="passou do limite!!";
+        document.getElementById("estado").innerHTML="<br/><br/>Voce perdeu!!!<br/>A senha era: " + senha.join('') + "<br/><br/> 	(￣ヘ￣) - vc me desaponta";
         return;
     }
 }
 
 function reiniciarJogo()
 {
+    document.getElementById("estado").innerHTML="<br/>Jogo reiniciado!<br/>Senha anterior: " + senha.join('') +"<br/><br/>Você tem 16 tentativas sobrando<br/><br/><br/>(^ᴗ^✿)";
+
     document.getElementById("botaoTentativa").disabled=false;
     senha = novaSenha();
     let newhistorico = [];
     historico = newhistorico;
-
-    //let keke = document.getElementById("historico");
-    //let caption = keke.createCaption();
-    //caption.textContent = "16 tentativas sobrando";
-    //historico.unshift({tentativa:"", hits: 0, vaca: 0});
-    //historico.shift(); idr why these are here
-
-    document.getElementById("estado").innerHTML="Jogo reiniciado!<br/>Você tem 16 tentativas sobrando";
     tentativas = 0;
 } 
 
 let senha = novaSenha();
 let tentativas = 0;
 let historico = [];
-document.getElementById("estado").innerHTML="<br/> Você tem 16 tentativas sobrando";
+document.getElementById("estado").innerHTML="<br/><br/>Você tem 16 tentativas sobrando<br/><br/><br/>ヾ(￣▽￣). - ola!! digita la embaixo ";
 
 
 botaoTentativa.addEventListener("click", lerEntrada);
